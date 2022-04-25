@@ -2,7 +2,7 @@ package tdd.kata;
 
 public class LeapYear {
 
-    public static boolean isLeapYear(int i) {
-        throw new IllegalArgumentException();
+    public static boolean isLeapYear(int year) {
+      return year % 400 == 0 || year % 4 == 0;
     }
 }

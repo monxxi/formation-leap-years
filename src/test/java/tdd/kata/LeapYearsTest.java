@@ -6,14 +6,23 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class LeapYearsTest {
 
-    @Test
-    public void leapYear2000() {
-       // Given
+  @Test
+  public void leapYear2000() {
+    assertThat(LeapYear.isLeapYear(2000)).isTrue();
+  }
 
-       // When
+  @Test
+  public void year2001() {
+    assertThat(LeapYear.isLeapYear(2001)).isFalse();
+  }
 
-       // Then
-        assertThat(LeapYear.isLeapYear(2000)).isTrue();
-    }
+  @Test
+  public void year400() {
+    assertThat(LeapYear.isLeapYear(400)).isTrue();
+  }
 
+  @Test
+  public void year2004() {
+    assertThat(LeapYear.isLeapYear(2004)).isTrue();
+  }
 }
